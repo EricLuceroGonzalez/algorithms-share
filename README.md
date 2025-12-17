@@ -7,7 +7,7 @@
 
 Welcome to the **code repository** companion for my research blog. Here you will find the source code, algorithms, and simulations discussed in my articles, ranging from Genetic Algorithms in Python to interactive React components.
 
-🌐 **Read the articles:** [ericlucero.com/blog](https://ericlucero.com/blog)
+🌐 **Read the articles:** [eric-lucero-gonzalez.vercel.app](https://eric-lucero-gonzalez.vercel.app)
 
 ---
 
