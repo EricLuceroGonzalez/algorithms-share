@@ -1,100 +1,60 @@
-# 🧪 Eric Lucero | Research & Algorithms Lab
+# 🧪 Eric Lucero | Optimization and AI
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Python](https://img.shields.io/badge/python-3.9+-blue.svg)
 ![JavaScript](https://img.shields.io/badge/javascript-ES6+-yellow.svg)
 ![Status](https://img.shields.io/badge/status-active-success.svg)
 
-Welcome to the **code repository** companion for my research blog. Here you will find the source code, algorithms, and simulations discussed in my articles, ranging from Genetic Algorithms in Python to interactive React components.
+# FIFA World Cup 2026 Draw Generator 🧬⚽
 
-🌐 **Read the articles:** [ericlucero.com/blog](https://ericlucero.com/blog)
+A Genetic Algorithm implementation to solve the complex constraint satisfaction problem of the FIFA World Cup 2026 group draw.
 
----
+## 🚀 Overview
 
-## 📂 Repository Structure
+The 2026 World Cup introduces a 48-team format with 12 groups, creating a combinatorial explosion of possibilities ($3.9 \times 10^{31}$). This project uses an evolutionary approach to find a valid draw that satisfies all FIFA constraints in milliseconds.
 
-The code is organized by topic and technology stack.
+**Read the full article and explanation:** [Generador de grupos de la Copa Mundial de la FIFA](https://eric-lucero-gonzalez.vercel.app/es/blog/sorteo-mundial)
 
-```text
-.
-├── 🧬 genetic-algorithms/   # Python scripts for evolution simulations
-│   ├── world-cup-draw/      # The FIFA World Cup Draw logic
-│   └── optimization/        # General function optimization
-│
-├── ⚛️ react-components/     # UI snippets shared on the blog
-│   ├── hooks/               # Custom hooks (e.g., useTransition)
-│   └── ui-kits/             # Styled-components and layouts
-│
-├── 📊 data-science/         # Jupyter Notebooks & Visualization
-│   ├── chartjs-demos/       # Configurations for Chart.js
-│   └── statistics/          # Probability models
-│
-└── 📝 latex-templates/      # LaTeX snippets for scientific notation
+## 🛠️ Constraints Handled
+
+1.  **Hard Constraints:**
+    * Valid Pot distribution (1 team from each pot per group).
+    * Confederation separation (No duplicate confederations per group, except UEFA max 2).
+    * Host allocation (Mexico A1, Canada B1, USA D1).
+2.  **Soft/Heuristic Constraints:**
+    * Top Seeds itinerary separation (Spain/Argentina and France/England on opposite bracket sides).
+
+## 💻 Tech Stack
+
+* **Logic:** JavaScript (ES6+) / Python
+* **Visualization:** React + Next.js + Styled Components (view `visualization.js`)
+
+## 🧬 Algorithm Details
+
+* **Representation:** Array of 12 groups.
+* **Selection:** Roulette Wheel Selection (inverse fitness).
+* **Crossover:** Stratified Crossover (swaps entire pots to maintain structure).
+* **Mutation:** Intra-pot swap (probability 0.2).
+
+## 📦 Usage
+
+### Python Version
+```bash
+cd python
+python main.py
 ```
 
-## 🚀 Highlights & Featured Code
+### JavaScript Logic
+You can import the `logic.js` file into any Node.js or browser project.
 
-1. Genetic Algorithms (Python)
-
-Implementation of evolutionary strategies to solve constraint satisfaction problems (CSP), specifically applied to sports tournament draws.
-
-Key File: `genetic-algorithms/world-cup-draw/fitness.py`
-
-Concepts: Chromosomes, Mutation, Crossover, Fitness Function constraints (confederations, itinerary logic).
-
-2. Next.js & React Patterns
-
-Modern frontend architecture examples using the App Router, Server Components, and Internationalization.
-
-Key File: `react-components/hooks/useLanguageSwitcher.js`
-
-Concepts: `useTransition`, `styled-components`, `next-intl`.
-
-## 🛠️ Installation & Usage
-To run these scripts locally, follow the instructions for each language environment.
-
-Python Environment
-
-Recommended for simulations and algorithms.
-
-```Bash
-# Clone the repository
-git clone [https://github.com/your-username/blog-algorithms.git](https://github.com/your-username/blog-algorithms.git)
-
-# Navigate to the folder
-cd blog-algorithms
-
-# Create a virtual environment (optional)
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install requirements (if provided in specific folders)
-pip install -r requirements.txt
+```javascript
+import { ejecutarGA } from './javascript/logic';
+const result = ejecutarGA();
+console.log(result);
 ```
 
-### JavaScript/React Environment
+## 👨‍💻 Author
 
-Most React components are isolated snippets, but you can run them in a sandbox or integrate them into your Next.js project.
-```Bash
-# Navigate to a JS folder
-cd react-components
-
-# (Assuming a package.json exists for specific demos)
-npm install
-npm run dev
-```
-## 🤝 Contributing & Open Science
-This repository follows Open Science principles. You are welcome to fork, audit the code, or propose improvements via Pull Requests.
-
-Fork the Project
-
-Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-
-Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-
-Push to the Branch (`git push origin feature/AmazingFeature`)
-
-Open a Pull Request
-
-## ⚖️ License
-Distributed under the MIT License. See `LICENSE` for more information.
+**Eric Lucero**
+* [Website]([https://](https://eric-lucero-gonzalez.vercel.app/))
+* [Twitter](https://x.com/EricLuceroG)
