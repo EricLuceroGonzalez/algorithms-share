@@ -13,7 +13,7 @@ A Genetic Algorithm implementation to solve the complex constraint satisfaction 
 
 The 2026 World Cup introduces a 48-team format with 12 groups, creating a combinatorial explosion of possibilities ($3.9 \times 10^{31}$). This project uses an evolutionary approach to find a valid draw that satisfies all FIFA constraints in milliseconds.
 
-**Read the full article and explanation:** [Generador de grupos de la Copa Mundial de la FIFA](https://eric-lucero-gonzalez.vercel.app/es/blog/sorteo-mundial)
+**Read the full article and explanation:** [Generador de grupos de la Copa Mundial de la FIFA](https://ericlucero.dev/es/blog/sorteo-mundial)
 
 ## 🛠️ Constraints Handled
 
@@ -56,5 +56,6 @@ console.log(result);
 ## 👨‍💻 Author
 
 **Eric Lucero**
-* [Website]([https://](https://eric-lucero-gonzalez.vercel.app/))
+* [Website]([https://](https://ericlucero.dev/))
 * [Twitter](https://x.com/EricLuceroG)
+* [LinkedIn](https://www.linkedin.com/in/ericlucerog/)
